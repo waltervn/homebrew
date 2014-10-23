@@ -26,7 +26,8 @@ class SdlMixer < Formula
     ENV.universal_binary if build.universal?
 
     system "./configure", "--prefix=#{prefix}",
-                          "--disable-dependency-tracking"
+                          "--disable-dependency-tracking",
+                          "--disable-music-ogg-shared"
     system "make install"
   end
 end
